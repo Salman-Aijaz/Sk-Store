@@ -4,7 +4,8 @@ import { ShopContext } from "../../Context/ShopContext";
 import remove_icon from "../Assets/cart_cross_icon.png";
 
 const CartItems = () => {
-  const { getTotalCartAmount,all_product, cartItems, removeFromCart } = useContext(ShopContext);
+  const { getTotalCartAmount, all_product, cartItems, removeFromCart } =
+    useContext(ShopContext);
   return (
     <div className="cartitems">
       <div className="cartitems-format-main">
@@ -19,7 +20,7 @@ const CartItems = () => {
       {all_product.map((e) => {
         if (cartItems[e.id] > 0) {
           return (
-            <div  key={e.id}>
+            <div key={e.id}>
               <div className="cartitems-format cartitems-format-main">
                 <img src={e.image} alt="" className="carticon-product-icon" />
                 <p>{e.name}</p>
@@ -58,18 +59,18 @@ const CartItems = () => {
             </div>
             <hr />
             <div className="cartitems-total-item">
-                <h3>Total</h3>
-                <h3>${getTotalCartAmount()}</h3>
+              <h3>Total</h3>
+              <h3>${getTotalCartAmount()}</h3>
             </div>
           </div>
           <button>PROCEED TO CHECKOUT</button>
         </div>
         <div className="cartitems-promocode">
-            <p>If you Have a promo code, Enter it here</p>
-            <div className="cartitems-promobox">
-                <input type="text" placeholder="Promo Code Here" />
-                <button>Submit</button>
-            </div>
+          <p>If you Have a promo code, Enter it here</p>
+          <div className="cartitems-promobox">
+            <input type="text" placeholder="Promo Code Here" />
+            <button>Submit</button>
+          </div>
         </div>
       </div>
     </div>

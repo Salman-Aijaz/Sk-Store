@@ -12,7 +12,7 @@ const NewCollection = () => {
         {new_collections.map((item, i) => {
           return (
             <Item
-            style={{width:"1470px"}}
+              style={{ width: "1470px" }}
               name={item.name}
               key={i}
               id={item.id}

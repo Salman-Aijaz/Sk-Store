@@ -10,8 +10,6 @@ const Popular = () => {
       <hr />
       <div className="popular-item">
         {data_product.map((item, i) => {
-          // console.log(item)
-          // console.log("id",i)  //JITNE PRODUCTS  AA RHE H UNKI ID AEGI
           return (
             <Item
               key={i}

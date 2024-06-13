@@ -5,24 +5,14 @@ import carticon from "../Assets/cart_icon.png";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
 import nav_dropdown from "../Assets/arrow-dropdown_2.png";
-import { User, useAuth0 } from "@auth0/auth0-react";
-
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
 
   const { getTotalCartItems } = useContext(ShopContext);
 
-  const { loginWithRedirect } = useAuth0();
-
-  const { logout } = useAuth0();
-
-  const { user, isAuthenticated, isLoading } = useAuth0();
-   
-// console.log(user)
-
   const menuRef = useRef();
-  
+
   const dropdown_toggle = (e) => {
     menuRef.current.classList.toggle("nav-menu-visible");
     e.target.classList.toggle("open");
@@ -34,7 +24,12 @@ const Navbar = () => {
         <img src={Logo} alt="" />
         <p>SK-STORE</p>
       </div>
-      <img className="nav-dropdown" onClick={dropdown_toggle}  src={nav_dropdown} alt="" />
+      <img
+        className="nav-dropdown"
+        onClick={dropdown_toggle}
+        src={nav_dropdown}
+        alt=""
+      />
       <ul ref={menuRef} className="nav-menu">
         <li
           onClick={() => {
@@ -77,25 +72,25 @@ const Navbar = () => {
           </Link>
           {menu === "kids" ? <hr /> : <></>}{" "}
         </li>
-      {/* <li>
-        {
-          isAuthenticated && <p>
-            {user}
-            
-          </p>
-        }
-      </li> */}
-        </ul>
+      </ul>
       <div className="nav-login-cart">
-        {/* <Link to="/login"> */}
-        {
-         isAuthenticated ? (
-         <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>  Log Out </button> ):
-        (          <button onClick={() => loginWithRedirect()}>Login</button>        )
-        }
-          {/* <button onClick={() => loginWithRedirect()}>Login</button>
-          <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>  Log Out </button> */}
-        {/* </Link> */}
+        {localStorage.getItem("auth-token") ? (
+          <button
+            onClick={() => {
+              localStorage.removeItem("auth-token");
+              window.location.replace("/");
+            }}
+          >
+            LogOut
+          </button>
+        ) : (
+          <Link to="/login">
+            <button>Login</button>
+          </Link>
+        )}
+        <Link to={"https://skstore-adminpanel.vercel.app/"}>
+          <button>Admin Panel</button>
+        </Link>
         <Link to="/cart">
           <img src={carticon} alt="" />
         </Link>

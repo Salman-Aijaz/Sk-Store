@@ -10,8 +10,6 @@ const RelatedProduct = () => {
       <hr />
       <div className="relatedproducts-item">
         {data_product.map((item, i) => {
-          // console.log("RELATED PRODUCTS ITEM",item)
-          // console.log("RELATED PRODUCTS ID",i)
           return (
             <Item
               style={{ width: "1470px" }}

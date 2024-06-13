@@ -2,7 +2,6 @@
   height: auto;
   background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
   display: flex;
-  /* width: auto; */
 }
 .hero-left {
   flex: 1;
@@ -12,15 +11,11 @@
   gap: 20px;
   padding-left: 10%;
   line-height: 1.1;
-  /* margin: 7%; */
-  /* margin-left: 82px; */
-  /* margin-top: 34px; */
 }
 .hero-left h2 {
   color: black;
   font-size: 26px;
   font-weight: 600;
-  /* margin-top: 2px; */
 }
 .hero-hand-icon {
   display: flex;
@@ -50,108 +45,104 @@
   color: #171717;
   font-size: 5vw;
   font-weight: 700;
-  /* margin-top: 22px;  */
 }
 .hero-right {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* height: 100%; */
-  /* width: 100px; */
 }
 @media (max-width: 1280px) {
   .hero-left {
     padding-left: 100px;
   }
-  .hero-left h2{
+  .hero-left h2 {
     font-size: 22px;
   }
-  .hero-left p{
+  .hero-left p {
     font-size: 60px;
   }
-  .hero-hand-icon img{
+  .hero-hand-icon img {
     width: 80px;
   }
-  .hero-latest-btn{
+  .hero-latest-btn {
     gap: 10px;
     width: 250px;
     height: 60px;
     margin-top: 18px;
     font-size: 18px;
   }
-  .hero-right img{
- width: 400px;
+  .hero-right img {
+    width: 400px;
   }
 }
 @media (max-width: 1024px) {
   .hero-left {
     padding-left: 80px;
   }
-  .hero-left h2{
+  .hero-left h2 {
     font-size: 20px;
   }
-  .hero-left p{
+  .hero-left p {
     font-size: 50px;
   }
-  .hero-hand-icon img{
+  .hero-hand-icon img {
     width: 65px;
   }
-  .hero-latest-btn{
+  .hero-latest-btn {
     width: 220px;
     height: 50px;
     font-size: 16px;
   }
-  .hero-right img{
- width: 350px;
+  .hero-right img {
+    width: 350px;
   }
 }
 @media (max-width: 800px) {
   .hero-left {
     padding-left: 30px;
   }
-  .hero-left h2{
+  .hero-left h2 {
     font-size: 16px;
   }
-  .hero-left p{
+  .hero-left p {
     font-size: 40px;
   }
-  .hero-hand-icon img{
+  .hero-hand-icon img {
     width: 50px;
   }
-  .hero-latest-btn{
+  .hero-latest-btn {
     width: 175px;
     height: 40px;
     font-size: 12px;
   }
-  .hero-right img{
- width: 300px;
+  .hero-right img {
+    width: 300px;
   }
 }
 @media (max-width: 500px) {
-  .hero{
+  .hero {
     flex-direction: column;
   }
-  .hero-right{
+  .hero-right {
     display: none;
     width: 300px;
-    /* display: flex; */
   }
-  .hero-left h2{
+  .hero-left h2 {
     font-size: 18px;
   }
-  .hero-left p{
+  .hero-left p {
     font-size: 50px;
   }
-  .hero-hand-icon img{
+  .hero-hand-icon img {
     width: 55px;
   }
-  .hero-latest-btn{
+  .hero-latest-btn {
     width: 200px;
     height: 45px;
     font-size: 14px;
   }
-  .hero-right img{
- width: 200px;
+  .hero-right img {
+    width: 200px;
   }
 }
